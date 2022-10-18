@@ -1,11 +1,11 @@
 import express from "express";
 import dotenv from "dotenv";
-import { userRouter } from "./";
+import { userRouter } from "./routes/user.route";
 import { connectDB } from "./config/db";
 dotenv.config();
 const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
 app.get("/", (req, res) => {
   res.send("API Server is running");
