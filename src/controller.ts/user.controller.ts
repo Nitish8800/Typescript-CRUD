@@ -4,12 +4,12 @@ import * as userService from "../services/user.services";
 
 export const createUser = controller(
   async (req: Request, res: Response): Promise<void> => {
-    const { name, age, email, password, mobile } = req.body;
+    const { name, email, age, password, mobile } = req.body;
 
     const user = await userService.createUser({
       name,
-      age,
       email,
+      age,
       password,
       mobile,
     });

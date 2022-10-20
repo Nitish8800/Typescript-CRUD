@@ -7,4 +7,11 @@ export interface IUser {
   lastUpdatePasswordDate: Date | null;
 }
 
+export interface IUserUpdate {
+  name?: string;
+  email?: string;
+  age?: number;
+  mobile?: number;
+}
+
 export interface IUserCreate extends Omit<IUser, "lastUpdatePasswordDate"> {}
